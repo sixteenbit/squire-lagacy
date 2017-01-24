@@ -2,7 +2,7 @@
 
 A guide for your guide.
 
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Build Status](https://travis-ci.org/sixteenbit/squire.svg?branch=master)](https://travis-ci.org/sixteenbit/squire)
 
 ## Getting Started
 
