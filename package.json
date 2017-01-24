@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "grunt": "latest",
-    "grunt-accessibility": "latest",
     "grunt-browser-sync": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-compress": "latest",

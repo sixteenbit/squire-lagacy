@@ -8,3 +8,4 @@ dist
 assets/css/*.css
 assets/js/*.js
 languages/*.pot
+grunt/rsync.js
