@@ -1,0 +1,15 @@
+.sq-footer {
+  font-size: rem-calc(12);
+
+  .sq-info {
+    padding: $global-padding;
+    text-align: center;
+  }
+
+  @include breakpoint(large up) {
+    .sq-info {
+      @include center-block;
+      text-align: left;
+    }
+  }
+}

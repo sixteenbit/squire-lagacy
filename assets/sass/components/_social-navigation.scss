@@ -1,0 +1,130 @@
+.social-navigation {
+  @include clearfix;
+
+  & > ul {
+    list-style: none;
+    margin: 0 0 $global-margin;
+    padding: rem-calc(16 0);
+
+    & > li {
+      float: left;
+      vertical-align: middle;
+
+      & > a {
+        display: block;
+        line-height: 1;
+        padding: rem-calc(0 16 0 0);
+      }
+
+      &:last-child {
+        & > a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  a {
+    font-size: rem-calc(18);
+    position: relative;
+
+    &::before {
+      content: '';
+      font-family: 'FontAwesome';
+      text-align: center;
+    }
+  }
+
+  a[href*='apple.com']::before {
+    content: '';
+  }
+
+  a[href*='bitbucket.com']::before {
+    content: '';
+  }
+
+  a[href*='codepen.io']::before {
+    content: '';
+  }
+
+  a[href*='dribbble.com']::before {
+    content: '';
+  }
+
+  a[href*='dropbox.com']::before {
+    content: '';
+  }
+
+  a[href*='facebook.com']::before {
+    content: '';
+  }
+
+  a[href*='flickr.com']::before {
+    content: '';
+  }
+
+  a[href*='foursquare.com']::before {
+    content: '';
+  }
+
+  a[href*='plus.google.com']::before {
+    content: '';
+  }
+
+  a[href*='github.com']::before {
+    content: '';
+  }
+
+  a[href*='instagram.com']::before {
+    content: '';
+  }
+
+  a[href*='last.fm']::before {
+    content: '';
+  }
+
+  a[href*='linkedin.com']::before {
+    content: '';
+  }
+
+  a[href*='pinterest.com']::before {
+    content: '';
+  }
+
+  a[href*='slack.com']::before {
+    content: '';
+  }
+
+  a[href*='spotify.com']::before {
+    content: '';
+  }
+
+  a[href*='tumblr.com']::before {
+    content: '';
+  }
+
+  a[href*='twitter.com']::before {
+    content: '';
+  }
+
+  a[href*='vimeo.com']::before {
+    content: '';
+  }
+
+  a[href*='wordpress.com']::before,
+  a[href*='wordpress.org']::before {
+    content: '';
+  }
+
+  a[href*='youtube.com']::before {
+    content: '';
+  }
+
+  a[href*='mailto:']::before {
+    content: '';
+  }
+
+  a[href$='/feed/']::before {
+    content: '';
+  }
+}

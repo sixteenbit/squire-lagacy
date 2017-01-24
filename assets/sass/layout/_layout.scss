@@ -1,0 +1,27 @@
+.site {
+  border-bottom: 1px solid $light-gray;
+}
+
+.sq-content {
+  padding: 0;
+  word-wrap: break-word;
+
+  &-area {
+    padding: $global-padding;
+  }
+
+  @include breakpoint(large up) {
+    &-area {
+      padding: rem-calc(80);
+    }
+  }
+}
+
+.sq-site-main {
+  @include center-block;
+  max-width: 960px;
+
+  &.wide {
+    max-width: none;
+  }
+}

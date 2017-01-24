@@ -1,0 +1,24 @@
+@import '../components/widgets';
+
+.sq-sidebar {
+  padding: 0;
+
+  .widget_nav_menu {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .widget-area {
+    display: none;
+    padding-bottom: $global-padding;
+
+    @include breakpoint(large up) {
+      display: block;
+    }
+  }
+
+  @include breakpoint(large up) {
+    border-right: 1px solid $light-gray;
+  }
+}
+

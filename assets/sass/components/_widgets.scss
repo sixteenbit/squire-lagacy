@@ -1,0 +1,100 @@
+.widget {
+  border-bottom: 1px solid $light-gray;
+  margin: 0 0 $global-margin;
+  padding: 0 $global-padding $global-padding;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &-title {
+    font-size: rem-calc(18);
+    letter-spacing: 1px;
+    margin: rem-calc(0);
+    padding: rem-calc(10 0 5);
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: rem-calc(5 0);
+  }
+
+  .children li:last-child {
+    padding-bottom: 0;
+  }
+
+  li > ul,
+  li > ol {
+    margin-left: rem-calc(20);
+  }
+
+  select {
+    max-width: 100%;
+  }
+
+  &_search {
+    .search-submit {
+      display: none;
+    }
+  }
+
+  /* Make sure select elements fit in widgets. */
+  select {
+    max-width: 100%;
+  }
+}
+
+.local-nav-title {
+  padding-left: $global-padding;
+}
+
+/* Recent Posts Widget */
+.widget_recent_entries {
+  .post-date {
+    display: block;
+  }
+}
+
+/* RSS Widget */
+.rsswidget {
+  img {
+    margin-top: -4px;
+  }
+}
+
+.rssSummary {
+  margin: rem-calc(9 0);
+}
+
+.rss-date {
+  display: block;
+}
+
+.widget_rss {
+  li {
+    margin-bottom: $global-margin;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Text Widget */
+.textwidget {
+
+}
+
+.widget_text {
+  & > div > :last-child {
+    margin-bottom: 0;
+  }
+}

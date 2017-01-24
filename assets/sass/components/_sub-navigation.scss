@@ -1,0 +1,31 @@
+.sub-navigation {
+  background-color: #f9fafc;
+  border-top: 4px solid $light-gray;
+
+  &::before {
+    background: $anchor-color;
+    border-right: 3px solid $white;
+    content: '';
+    display: block;
+    font-size: 6px;
+    height: 4px;
+    margin: -4px 0;
+    width: 100px;
+  }
+
+  .menu {
+    @include menu-direction(vertical);
+    padding: rem-calc(4 0 0);
+
+    & > li > a {
+      border-bottom: 1px solid $light-gray;
+      color: $body-font-color;
+      font-size: rem-calc(13);
+      padding: 1rem;
+
+      @include on-event() {
+        color: $anchor-color;
+      }
+    }
+  }
+}

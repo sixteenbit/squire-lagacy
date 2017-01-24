@@ -1,0 +1,79 @@
+.site-header {
+  background-color: $white;
+  position: relative;
+  z-index: 99;
+}
+
+.sq {
+  &-branding {
+    @include clearfix;
+    border-bottom: 1px solid $light-gray;
+    padding: rem-calc(10 15);
+    position: relative;
+
+    .custom-logo {
+      display: block;
+      float: left;
+      margin-right: rem-calc(10);
+      width: 60px;
+    }
+
+    @include breakpoint(large up) {
+      padding: rem-calc(40 15);
+      text-align: center;
+
+      .custom-logo {
+        float: none;
+        height: auto;
+        margin: 0 auto $global-margin;
+        width: 125px;
+      }
+    }
+  }
+
+  &-title {
+    font-size: rem-calc(24);
+    font-weight: 300;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+
+    @include breakpoint(xlarge up) {
+      font-size: rem-calc(42);
+    }
+  }
+
+  &-description {
+    font-size: rem-calc(14);
+    margin: 0;
+
+    @include breakpoint(xlarge up) {
+      font-size: rem-calc(20);
+    }
+  }
+
+  &-title,
+  &-description {
+    .wp-custom-logo & {
+      display: none !important;
+
+      @include breakpoint(large up) {
+        display: block;
+      }
+    }
+  }
+}
+
+.wp-custom-header {
+  @include responsive-embed(widescreen);
+
+  .wp-custom-header-video-button {
+    display: none;
+  }
+}
+
+.menu-toggle {
+  @include hide-for(large);
+  @include vertical-center;
+  right: $global-margin;
+}

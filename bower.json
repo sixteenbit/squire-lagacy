@@ -1,0 +1,15 @@
+{
+  "name": "squire",
+  "title": "Squire",
+  "description": "A guide for your guide.",
+  "version": "0.1.0",
+  "main": "/",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "foundation-sites": "^6.3.0",
+    "motion-ui": "^1.2.2",
+    "font-awesome": "^4.7.0",
+    "html5shiv": "aFarkas/html5shiv#^3.7.3",
+    "matchHeight": "^0.7.0"
+  }
+}

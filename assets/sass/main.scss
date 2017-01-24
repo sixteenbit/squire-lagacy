@@ -1,0 +1,36 @@
+// Configuration and helpers
+@import 'abstracts/mixins';
+
+// Vendors
+@import 'vendor/foundation';
+@include foundation-everything(true);
+@import 'src/motion-ui';
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+// Base stuff
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/helpers';
+
+// Layout-related sections
+@import 'layout/layout';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/posts';
+@import 'layout/sidebar';
+@import 'layout/footer';
+
+// Components
+@import 'components/media';
+@import 'components/comments';
+@import 'components/color-block';
+@import 'components/grid-outline';
+@import 'components/top';
+
+// Page-specific styles
+@import 'pages/home';
+@import 'pages/error-404';
+
+// Themes
+@import 'themes/default';

@@ -1,0 +1,41 @@
+@import '../components/main-navigation';
+@import '../components/sub-navigation';
+@import '../components/social-navigation';
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+  .site-main & {
+    margin: 0 0 $global-margin;
+    overflow: hidden;
+  }
+
+  .nav-previous,
+  .nav-next {
+    a {
+      font-weight: $global-weight-bold;
+    }
+  }
+
+  .nav-previous {
+    float: left;
+    width: 50%;
+
+    a::before {
+      content: ' ';
+      font-family: 'FontAwesome';
+    }
+  }
+
+  .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+
+    a::after {
+      content: ' ';
+      font-family: 'FontAwesome';
+    }
+  }
+}

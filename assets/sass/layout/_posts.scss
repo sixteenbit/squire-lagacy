@@ -1,0 +1,139 @@
+.hentry {
+  @include clearfix;
+  margin-bottom: rem-calc(30);
+  position: relative;
+
+  .attachment-post-thumbnail {
+    margin-bottom: rem-calc(24);
+  }
+}
+
+.entry-title,
+.page-title {
+  border-bottom: 4px solid $light-gray;
+  letter-spacing: 1px;
+  margin-bottom: rem-calc(15);
+  padding: rem-calc(10 0 5);
+  position: relative;
+
+  &::after {
+    background: $anchor-color;
+    border-right: 3px solid $white;
+    content: '';
+    display: block;
+    font-size: 6px;
+    height: 4px;
+    margin: 12px 0 -9px;
+    width: 100px;
+  }
+
+  @include breakpoint(medium up) {
+    font-size: rem-calc(52);
+    line-height: 1.2;
+  }
+}
+
+.entry-content,
+.entry-summary,
+.entry-footer {
+  font-size: rem-calc(18);
+  hyphens: auto;
+  word-wrap: break-word;
+
+  a:not(.post-thumbnail) {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      border-bottom: 2px solid currentColor;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      transition: .4s;
+      width: 0;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.byline,
+.updated:not(.published) {
+  display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+.single-featured-image-header img {
+  height: auto;
+  width: 100%;
+}
+
+.entry-meta,
+.entry-footer {
+  @include clearfix;
+  color: $dark-gray;
+  font-size: rem-calc(14);
+  margin-bottom: rem-calc(15);
+
+  a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      border-bottom: 2px solid currentColor;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      transition: .4s;
+      width: 0;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.cat-links,
+.tags-links {
+  margin-right: rem-calc(10);
+}
+
+.comments-link {
+  float: right;
+}
+
+.child-section {
+  @include disable-mouse-outline;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.edit-link {
+  display: block;
+
+  .post-edit-link {
+    @include button;
+    font-size: rem-calc(12);
+
+    &::before {
+      content: '';
+      font-family: 'FontAwesome';
+      margin-right: rem-calc(5);
+    }
+  }
+}
