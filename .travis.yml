@@ -5,6 +5,8 @@ before_script:
   - gem install sass -g
   - npm install grunt-cli -g
   - npm install bower -g
+install:
+  - bower install
 script:
   - grunt setup
   - grunt build

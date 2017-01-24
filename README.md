@@ -15,7 +15,7 @@ Make sure you have the following installed:
 
 In the root of your project, run the following:
 
-`npm i && bower i`
+`npm i && bower i && grunt setup`
 
 Then run `grunt` to build the project.
 
@@ -25,6 +25,14 @@ In your wp-content/themes folder you will now have a folder with the name of you
 
     grunt # runs the default task that builds the assets
     grunt server # initiates Browsersync and watches files for changes
+    
+### Sass
+
+Global variables are located in `/assets/sass/abstracts/_foundation-vars.scss`
+
+### Javascript
+
+All files in `/assets/js/src/` are concatenated into the `/assets/js/` directory.
 
 ## Production
 
@@ -34,11 +42,16 @@ When you're done and ready to go live you'll need to minify your js and whatnot.
     
 This will minify all your assets and copy the theme to a dist/ directory then compresses to a .zip.
 
-### Theme structure
+## Shortcodes
 
-/assets/sass/ - Development Sass files that is compiled into assets/css/main.css.
-/assets/js/src/ - Development js that is concatenated to /assets/js/.
+### Button
 
-style.css - names and sets up your theme as far as WordPress is concerned.
-functions.php - your theme functions
-*.php your theme files
+`[button style="" url="http://example.com"]A Button[/button]`
+
+### Color Block
+
+`[color-block color="0069ff"]`
+
+## Multi Page template
+
+Squire has the option to load child pages into the parent page along with an on page navigation. Simply select the "Multi Page" template and add child pages to the parent.
