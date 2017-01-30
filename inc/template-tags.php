@@ -12,7 +12,7 @@ if ( ! function_exists( 'squire_footer_text' ) ) :
 	function squire_footer_text() {
 		$footer_text = get_theme_mod( 'footer_text' );
 
-		if ( isset( $footer_text ) ) {
+		if ( !empty( $footer_text ) ) {
 			echo esc_html( $footer_text );
 		} else {
 			echo sprintf( __( '&copy; %s. All rights reserved.', 'squire' ), date( 'Y' ) . ' ' . esc_html( get_bloginfo( 'name' ) ) );

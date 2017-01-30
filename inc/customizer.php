@@ -816,8 +816,7 @@ function squire_get_color_scheme_css( $colors ) {
 	}
 
 	/* Border Color */
-	.comment-metadata a,
-	.color-block {
+	.comment-metadata a {
 		color: {$colors['border_color']};
 	}
 	
@@ -830,7 +829,8 @@ function squire_get_color_scheme_css( $colors ) {
 	.sub-navigation::before,
 	.sub-navigation .menu > li > a,
 	.entry-title,
-	.site-footer {
+	.site-footer,
+	.color-block {
 		border-color: {$colors['border_color']};
 	}
 	
@@ -1223,8 +1223,7 @@ function squire_border_color_css() {
 	$css = '
 		/* Custom Border Color */
 
-		.comment-metadata a,
-		.color-block {
+		.comment-metadata a {
 			color: %1$s;
 		}
 		
@@ -1237,7 +1236,8 @@ function squire_border_color_css() {
 		.sub-navigation::before,
 		.sub-navigation .menu > li > a,
 		.entry-title,
-		.site-footer {
+		.site-footer,
+		.color-block {
 			border-color: %1$s;
 		}
 		

@@ -399,3 +399,8 @@ require get_parent_theme_file_path( '/inc/jetpack.php' );
  * Load custom menu walkers.
  */
 require get_parent_theme_file_path( '/inc/menu-walkers.php' );
+
+/**
+ * Load custom shortcodes.
+ */
+require get_parent_theme_file_path( '/inc/shortcodes.php' );
