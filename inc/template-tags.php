@@ -114,7 +114,7 @@ if ( ! function_exists( 'squire_entry_footer' ) ) :
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'dox' ), esc_html__( '1 Comment', 'squire' ),
+			comments_popup_link( esc_html__( 'Leave a comment', 'squire' ), esc_html__( '1 Comment', 'squire' ),
 				esc_html__( '% Comments', 'squire' ) );
 			echo '</span>';
 		}

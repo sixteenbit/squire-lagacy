@@ -1,27 +1,33 @@
-.site {
+/* Layout */
+.sq {
   border-bottom: 1px solid $light-gray;
-}
 
-.sq-content {
-  padding: 0;
-  word-wrap: break-word;
+  &-content {
+    word-wrap: break-word;
 
-  &-area {
-    padding: $global-padding;
-  }
+    @include breakpoint(large up) {
+      border-left: 1px solid $light-gray;
+    }
 
-  @include breakpoint(large up) {
     &-area {
-      padding: rem-calc(80);
+      @include flex-grid-column;
+      @include breakpoint(large up) {
+        padding: rem-calc(80);
+      }
     }
   }
-}
 
-.sq-site-main {
-  @include center-block;
-  max-width: 960px;
+  &-sidebar {
+    padding-right: 0;
+    padding-left: 0;
+  }
 
-  &.wide {
-    max-width: none;
+  .sq-site-main {
+    @include center-block;
+    max-width: 960px;
+
+    &.wide {
+      max-width: none;
+    }
   }
 }

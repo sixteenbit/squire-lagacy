@@ -23,7 +23,7 @@ module.exports = {
 			debugInfo: true,
 			logConnections: true,
 			notify: true,
-			proxy: 'sixteenbit.dev/squire',
+			proxy: 'sixteenbit.dev',
 			ghostMode: {
 				scroll: true,
 				links: true,

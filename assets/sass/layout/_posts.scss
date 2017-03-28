@@ -1,7 +1,12 @@
+.sticky,
+.bypostauthor {
+  display: block;
+}
+
 .hentry {
   @include clearfix;
-  margin-bottom: rem-calc(30);
   position: relative;
+  margin-bottom: rem-calc(30);
 
   .attachment-post-thumbnail {
     margin-bottom: rem-calc(24);
@@ -10,21 +15,21 @@
 
 .entry-title,
 .page-title {
-  border-bottom: 4px solid $light-gray;
-  letter-spacing: 1px;
+  position: relative;
   margin-bottom: rem-calc(15);
   padding: rem-calc(10 0 5);
-  position: relative;
+  border-bottom: 4px solid $light-gray;
+  letter-spacing: 1px;
 
   &::after {
-    background: $anchor-color;
-    border-right: 3px solid $white;
-    content: '';
     display: block;
-    font-size: 6px;
+    width: 100px;
     height: 4px;
     margin: 12px 0 -9px;
-    width: 100px;
+    border-right: 3px solid $white;
+    background: $anchor-color;
+    content: '';
+    font-size: 6px;
   }
 
   @include breakpoint(medium up) {
@@ -37,26 +42,28 @@
 .entry-summary,
 .entry-footer {
   font-size: rem-calc(18);
-  hyphens: auto;
   word-wrap: break-word;
+  hyphens: auto;
 
   a:not(.post-thumbnail) {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     text-decoration: none;
 
     &::after {
-      border-bottom: 2px solid currentColor;
-      bottom: 0;
-      content: '';
-      left: 0;
       position: absolute;
-      transition: .4s;
+      bottom: 0;
+      left: 0;
       width: 0;
+      border-bottom: 2px solid currentColor;
+      transition: 0.4s;
+      content: '';
     }
 
-    &:hover::after {
-      width: 100%;
+    &:hover {
+      &::after {
+        width: 100%;
+      }
     }
   }
 }
@@ -72,34 +79,36 @@
 }
 
 .single-featured-image-header img {
-  height: auto;
   width: 100%;
+  height: auto;
 }
 
 .entry-meta,
 .entry-footer {
   @include clearfix;
-  color: $dark-gray;
-  font-size: rem-calc(14);
   margin-bottom: rem-calc(15);
+  font-size: rem-calc(14);
+  color: $dark-gray;
 
   a {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     text-decoration: none;
 
     &::after {
-      border-bottom: 2px solid currentColor;
-      bottom: 0;
-      content: '';
-      left: 0;
       position: absolute;
-      transition: .4s;
+      bottom: 0;
+      left: 0;
       width: 0;
+      border-bottom: 2px solid currentColor;
+      transition: 0.4s;
+      content: '';
     }
 
-    &:hover::after {
-      width: 100%;
+    &:hover {
+      &::after {
+        width: 100%;
+      }
     }
   }
 }
@@ -117,9 +126,9 @@
   @include disable-mouse-outline;
 
   &:not(:last-child) {
-    border-bottom: 2px solid #ccc;
     margin-bottom: 4rem;
     padding-bottom: 4rem;
+    border-bottom: 2px solid #ccc;
   }
 }
 
@@ -131,9 +140,9 @@
     font-size: rem-calc(12);
 
     &::before {
+      margin-right: rem-calc(5);
       content: '';
       font-family: 'FontAwesome';
-      margin-right: rem-calc(5);
     }
   }
 }

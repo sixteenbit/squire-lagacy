@@ -111,8 +111,7 @@ if ( ! function_exists( 'squire_setup' ) ) :
 		 */
 		add_editor_style( array(
 			'assets/css/main.css',
-			'assets/css/editor-style.css',
-			squire_fonts_url()
+			'assets/css/editor-style.css'
 		) );
 	}
 endif;
@@ -131,56 +130,6 @@ function squire_content_width() {
 }
 
 add_action( 'after_setup_theme', 'squire_content_width', 0 );
-
-/**
- * Register custom fonts.
- */
-function squire_fonts_url() {
-	$fonts_url = '';
-
-	/**
-	 * Translators: If there are characters in your language that are not
-	 * supported by Lato, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$lato = _x( 'on', 'Lato font: on or off', 'squire' );
-
-	if ( 'off' !== $lato ) {
-		$font_families = array();
-
-		$font_families[] = 'Lato:100,300,400,400i,700,700i,900';
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return esc_url_raw( $fonts_url );
-}
-
-/**
- * Add preconnect for Google Fonts.
- *
- * @param array $urls URLs to print for resource hints.
- * @param string $relation_type The relation type the URLs are printed.
- *
- * @return array $urls           URLs to print for resource hints.
- */
-function squire_resource_hints( $urls, $relation_type ) {
-	if ( wp_style_is( 'squire-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
-		$urls[] = array(
-			'href' => 'https://fonts.gstatic.com',
-			'crossorigin',
-		);
-	}
-
-	return $urls;
-}
-
-add_filter( 'wp_resource_hints', 'squire_resource_hints', 10, 2 );
 
 /**
  * Register widget area.
@@ -276,9 +225,6 @@ function squire_scripts() {
 
 	$suffix = is_rtl() ? '-rtl' : '';
 
-	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'squire-fonts', squire_fonts_url(), array(), null );
-
 	// Load Font Awesome, used in the main stylesheet.
 	wp_enqueue_style( 'squire-font-awesome', get_theme_file_uri( '/assets/css/font-awesome' . $suffix . '.css' ), array( 'squire-main' ), SQUIRE_VERSION );
 
@@ -298,7 +244,7 @@ function squire_scripts() {
 	wp_enqueue_script( 'squire-theme', get_theme_file_uri( '/assets/js/theme.js' ), array( 'jquery' ), SQUIRE_VERSION, true );
 
 	// Load the html5 shiv.
-	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), SQUIRE_VERSION );
+	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5shiv.js' ), array(), SQUIRE_VERSION );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -374,6 +320,16 @@ function squire_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 }
 
 add_filter( 'wp_get_attachment_image_attributes', 'squire_post_thumbnail_sizes_attr', 10, 3 );
+
+/**
+ * Check for theme updates
+ */
+require get_parent_theme_file_path( '/inc/theme-update-checker.php' );
+
+$SquireThemeUpdateChecker = new ThemeUpdateChecker(
+	'squire',
+	'https://sixteenbit.com/updates/?action=get_metadata&slug=squire' //Metadata URL.
+);
 
 /**
  * Custom template tags for this theme.

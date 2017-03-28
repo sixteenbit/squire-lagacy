@@ -1,0 +1,15 @@
+.mobile-navigation {
+  .menu {
+    & > li {
+      & > a {
+        padding-top: rem-calc(24);
+        padding-bottom: rem-calc(24);
+        border-top: 1px solid $light-gray;
+        border-bottom: 1px solid $dark-gray;
+        font-size: rem-calc(21);
+        font-weight: 600;
+        color: $body-font-color;
+      }
+    }
+  }
+}

@@ -8,25 +8,33 @@
   word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 
   &:focus {
-    background-color: $body-background;
-    border-radius: $global-radius;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
-    clip: auto !important;
-    color: $anchor-color;
+    top: 5px;
+    left: 5px;
+    z-index: 100000; /* Above WP toolbar. */
     display: block;
+    width: auto;
+    height: auto;
+    padding: rem-calc(15 23 14);
+    border-radius: $global-radius;
+    background-color: $body-background;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
     font-size: rem-calc(14);
     font-weight: $global-weight-bold;
-    height: auto;
-    left: 5px;
     line-height: normal;
-    padding: rem-calc(15 23 14);
+    color: $anchor-color;
     text-decoration: none;
-    top: 5px;
-    width: auto;
-    z-index: 100000; /* Above WP toolbar. */
   }
 }
 
 a {
-  transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s, color .3s ease-in-out;
+  line-height: inherit;
+  color: $anchor-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $anchor-color-hover;
+  }
 }

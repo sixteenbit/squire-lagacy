@@ -34,6 +34,6 @@ module.exports = {
 				require( 'cssnano' )()
 			]
 		},
-		src: ['assets/css/*.css']
+		src: ['dist/<%= package.name %>/assets/css/*.css']
 	}
 };

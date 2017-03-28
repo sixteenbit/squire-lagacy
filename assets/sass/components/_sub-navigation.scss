@@ -1,27 +1,28 @@
 .sub-navigation {
-  background-color: #f9fafc;
   border-top: 4px solid $light-gray;
+  background-color: #f9fafc;
 
   &::before {
-    background: $anchor-color;
-    border-right: 3px solid $white;
-    content: '';
     display: block;
-    font-size: 6px;
+    width: 100px;
     height: 4px;
     margin: -4px 0;
-    width: 100px;
+    border-right: 3px solid $white;
+    background: $anchor-color;
+    content: '';
+    font-size: 6px;
   }
 
   .menu {
+    @include menu-base;
     @include menu-direction(vertical);
     padding: rem-calc(4 0 0);
 
     & > li > a {
-      border-bottom: 1px solid $light-gray;
-      color: $body-font-color;
-      font-size: rem-calc(13);
       padding: 1rem;
+      border-bottom: 1px solid $light-gray;
+      font-size: rem-calc(13);
+      color: $body-font-color;
 
       @include on-event() {
         color: $anchor-color;

@@ -1,13 +1,14 @@
-.sq-footer {
-  font-size: rem-calc(12);
-
-  .sq-info {
-    padding: $global-padding;
-    text-align: center;
+.sq {
+  &-footer {
+    font-size: rem-calc(12);
   }
 
-  @include breakpoint(large up) {
-    .sq-info {
+  &-info {
+    @include flex-grid-column;
+    padding: $global-padding;
+    text-align: center;
+
+    @include breakpoint(large up) {
       @include center-block;
       text-align: left;
     }

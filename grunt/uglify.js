@@ -16,12 +16,12 @@ module.exports = {
 	},
 	main: {
 		files: {
-			'assets/js/color-scheme-control.js': 'assets/js/color-scheme-control.js',
-			'assets/js/customize-preview.js': 'assets/js/customize-preview.js',
-			'assets/js/foundation.js': 'assets/js/foundation.js',
-			'assets/js/html5shiv.js': 'assets/js/html5shiv.js',
-			'assets/js/skip-link-focus-fix.js': 'assets/js/skip-link-focus-fix.js',
-			'assets/js/theme.js': 'assets/js/theme.js'
+			'dist/<%= package.name %>/assets/js/color-scheme-control.js': 'dist/<%= package.name %>/assets/js/color-scheme-control.js',
+			'dist/<%= package.name %>/assets/js/customize-preview.js': 'dist/<%= package.name %>/assets/js/customize-preview.js',
+			'dist/<%= package.name %>/assets/js/foundation.js': 'dist/<%= package.name %>/assets/js/foundation.js',
+			'dist/<%= package.name %>/assets/js/html5shiv.js': 'dist/<%= package.name %>/assets/js/html5shiv.js',
+			'dist/<%= package.name %>/assets/js/skip-link-focus-fix.js': 'dist/<%= package.name %>/assets/js/skip-link-focus-fix.js',
+			'dist/<%= package.name %>/assets/js/theme.js': 'dist/<%= package.name %>/assets/js/theme.js'
 
 		}
 	}

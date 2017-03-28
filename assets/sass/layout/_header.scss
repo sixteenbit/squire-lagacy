@@ -1,21 +1,21 @@
-.site-header {
-  background-color: $white;
-  position: relative;
-  z-index: 99;
-}
-
 .sq {
+  &-header {
+    position: relative;
+    //z-index: 99;
+    background-color: $white;
+  }
+
   &-branding {
     @include clearfix;
-    border-bottom: 1px solid $light-gray;
-    padding: rem-calc(10 15);
     position: relative;
+    padding: rem-calc(10 15);
+    border-bottom: 1px solid $light-gray;
 
     .custom-logo {
       display: block;
       float: left;
-      margin-right: rem-calc(10);
       width: 60px;
+      margin-right: rem-calc(10);
     }
 
     @include breakpoint(large up) {
@@ -24,18 +24,18 @@
 
       .custom-logo {
         float: none;
+        width: 125px;
         height: auto;
         margin: 0 auto $global-margin;
-        width: 125px;
       }
     }
   }
 
   &-title {
+    margin: 0;
     font-size: rem-calc(24);
     font-weight: 300;
     line-height: 1;
-    margin: 0;
     text-transform: uppercase;
 
     @include breakpoint(xlarge up) {
@@ -44,8 +44,8 @@
   }
 
   &-description {
-    font-size: rem-calc(14);
     margin: 0;
+    font-size: rem-calc(14);
 
     @include breakpoint(xlarge up) {
       font-size: rem-calc(20);

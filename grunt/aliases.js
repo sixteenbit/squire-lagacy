@@ -23,9 +23,9 @@ module.exports = {
 	'build': [
 		'clean',
 		'default',
+		'copy:main',
 		'postcss:build',
 		'uglify',
-		'copy:main',
 		'compress',
 		'notify:build'
 	],

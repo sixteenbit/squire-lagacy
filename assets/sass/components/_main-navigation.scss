@@ -1,27 +1,29 @@
 .main-navigation,
 .widget_nav_menu {
+  margin-bottom: rem-calc(16);
   background-color: #f9fafc;
-  margin-bottom: rem-calc(40);
 
   .widget-title {
+    padding: rem-calc(10 16);
     border-bottom: 4px solid #e8e8e8;
     font-size: rem-calc(16);
     letter-spacing: 1px;
-    padding: rem-calc(10 16);
     text-transform: uppercase;
   }
 
   .menu {
+    @include menu-base;
     @include menu-direction(vertical);
+    padding: 0;
 
     & > li {
       & > a {
-        background-color: $white;
+        padding: 1.5rem;
         border-bottom: 1px solid $light-gray;
-        color: $body-font-color;
+        background-color: $white;
         font-size: rem-calc(21);
         font-weight: 500;
-        padding: 1.5rem;
+        color: $body-font-color;
 
         @include on-event() {
           background-color: #f9fafc;
@@ -38,8 +40,8 @@
   .submenu {
     & > li {
       & > a {
-        font-size: rem-calc(16);
         padding-left: rem-calc(50);
+        font-size: rem-calc(16);
       }
     }
   }

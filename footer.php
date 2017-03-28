@@ -9,7 +9,9 @@
 
 ?>
 
-	</div><!-- #content -->
+			</div><!-- #content -->
+		</div><!-- .row -->
+	</div><!-- .off-canvas-content -->
 </div><!-- #page -->
 
 <div class="back-to-top js-back-to-top">

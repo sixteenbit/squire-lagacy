@@ -10,6 +10,7 @@
 // Settings
 // import your own `settings` here or
 // import and modify the default settings through
+// @import 'settings/settings';
 @import '../abstracts/foundation-vars';
 
 // Sass utilities
@@ -65,7 +66,8 @@
   @include foundation-global-styles;
   @if not $flex {
     @include foundation-grid;
-  } @else {
+  }
+  @else {
     @include foundation-flex-grid;
   }
   @include foundation-typography;
@@ -88,13 +90,13 @@
   @include foundation-label;
   @include foundation-media-object;
   @include foundation-off-canvas;
-  //@include foundation-orbit;
+  @include foundation-orbit;
   @include foundation-pagination;
   @include foundation-progress-bar;
-  //@include foundation-slider;
+  @include foundation-slider;
   @include foundation-sticky;
   @include foundation-reveal;
-  //@include foundation-switch;
+  @include foundation-switch;
   @include foundation-table;
   @include foundation-tabs;
   @include foundation-thumbnail;

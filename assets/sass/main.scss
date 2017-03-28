@@ -3,7 +3,23 @@
 
 // Vendors
 @import 'vendor/foundation';
-@include foundation-everything(true);
+//@include foundation-everything(true);
+@include foundation-global-styles;
+@include foundation-typography;
+@include foundation-table;
+@include foundation-forms;
+@include foundation-button;
+@include foundation-flex-grid;
+@include foundation-off-canvas;
+@include foundation-close-button;
+@include foundation-flex-classes;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+
 @import 'src/motion-ui';
 @include motion-ui-transitions;
 @include motion-ui-animations;
